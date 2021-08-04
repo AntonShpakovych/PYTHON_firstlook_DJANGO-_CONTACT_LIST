@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+{% block title %}Add contact{% endblock %}
+{% block content %}
+<div class="features">
+    <h1>Form for add news</h1>
+    <form method = 'post'>
+        {% csrf_token %}
+        {{ form.name }}<br>
+        {{ form.sur_name }}<br>
+        {{ form.email }}<br>
+        {{ form.phone }}<br>
+        <span>{{ error }}</span>
+        <button class="btn btn-success" type="submit">Add contact</button>
+    </form>
+ </div>
+{% endblock %}
+
+
